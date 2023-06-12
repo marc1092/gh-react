@@ -1,0 +1,24 @@
+name: primerNodejs
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  
+  workflow_dispatch:
+  
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+    
+    steps:
+     - uses: actions/checkout@v2
+     
+     - name: Run a one-line script
+       run: echo Hola, mundo
+     
+     - name: Run a mult-line script
+       run: 
+        echo Add other actions tobuild,
+        echo test, and deploy your proyect
